@@ -1,0 +1,1096 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Climate Change - Introduction</title>
+    <link rel="icon" type="image/png" href="./images/climate logo.png">
+    <style>
+/* ==========================================
+   CLIMATE CHANGE WEBSITE - CSS STYLESHEET
+   Pure CSS - No JavaScript - Beginner Friendly
+   ========================================== */
+
+/* ==========================================
+   1. RESET & BASE STYLES
+   ========================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #2d5016; /* Dark green text for readability */
+    background-color: #fafafa;
+    overflow-x: hidden;
+}
+
+/* ==========================================
+   2. CSS PRELOADER (NO JAVASCRIPT)
+   ========================================== */
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #f8c8dc 0%, #c8e6c9 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    animation: fadeOut 0.5s ease-in-out 2s forwards;
+}
+
+.preloader-content {
+    text-align: center;
+}
+
+.spinner {
+    width: 60px;
+    height: 60px;
+    border: 5px solid rgba(255, 255, 255, 0.3);
+    border-top: 5px solid #2d5016;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+.preloader-text {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    color: #2d5016;
+    font-weight: 600;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+/* ==========================================
+   3. HEADER & NAVIGATION
+   ========================================== */
+header {
+    background: linear-gradient(135deg, #f8c8dc 0%, #fde2e9 100%);
+    padding: 1.5rem 2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #2d5016;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #2d5016;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    background-color: #c8e6c9;
+    color: #1a3009;
+    transform: translateY(-2px);
+}
+
+/* ==========================================
+   4. HERO SECTION
+   ========================================== */
+.hero {
+    background: linear-gradient(135deg, #c8e6c9 0%, #a5d6a7 100%);
+    padding: 4rem 2rem;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.hero-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    color: #1a3009;
+    margin-bottom: 1rem;
+    animation: slideDown 0.8s ease-out;
+}
+
+.hero p {
+    font-size: 1.3rem;
+    color: #2d5016;
+    max-width: 700px;
+    margin: 0 auto;
+    animation: slideUp 0.8s ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ==========================================
+   5. MAIN CONTENT CONTAINER
+   ========================================== */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* ==========================================
+   6. CARD/BOX SYSTEM (MAIN DESIGN ELEMENT)
+   ========================================== */
+.content-card {
+    background: white;
+    border-radius: 15px;
+    padding: 2.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+
+.content-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+}
+
+.content-card h2 {
+    color: #1a3009;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.8rem;
+    border-bottom: 3px solid #f8c8dc;
+}
+
+.content-card h3 {
+    color: #2d5016;
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.content-card p {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.content-card ul,
+.content-card ol {
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+}
+
+.content-card li {
+    margin-bottom: 0.8rem;
+    font-size: 1.05rem;
+}
+
+/* ==========================================
+   7. IMAGE PLACEHOLDER BOXES & IMG STYLING
+   ========================================== */
+.image-box {
+    background: linear-gradient(135deg, #f8c8dc 0%, #fde2e9 100%);
+    border-radius: 12px;
+    padding: 0; /* Changed padding to 0 for full-bleed images */
+    margin: 2rem 0;
+    min-height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #2d5016;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border: 3px solid #c8e6c9; /* Changed from dashed to solid for better image framing */
+    overflow: hidden; /* Ensures image corners respect border-radius */
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.image-box:hover {
+    border-color: #a5d6a7;
+    transform: scale(1.01);
+}
+
+/* Senior Dev Addition: Styling the images inside the boxes */
+.image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures image covers the area without distortion */
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.image-box:hover img {
+    transform: scale(1.05); /* Subtle zoom effect on hover */
+}
+
+/* Fallback text if image doesn't load (preserves original intent) */
+.image-box::before {
+    content: attr(data-alt-text);
+    position: absolute;
+    z-index: 0;
+    opacity: 0; 
+}
+.image-box img:not([src]) {
+    display: none;
+}
+
+/* Image Grid Layout */
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.image-grid .image-box {
+    min-height: 250px;
+}
+
+/* ==========================================
+   8. TWO-COLUMN LAYOUT
+   ========================================== */
+.two-column {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.column {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+}
+
+/* ==========================================
+   9. BUTTONS & INTERACTIVE ELEMENTS
+   ========================================== */
+.btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: linear-gradient(135deg, #c8e6c9 0%, #a5d6a7 100%);
+    color: #1a3009;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+    margin: 0.5rem;
+}
+
+.btn:hover {
+    background: linear-gradient(135deg, #a5d6a7 0%, #81c784 100%);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.btn-secondary {
+    background: linear-gradient(135deg, #f8c8dc 0%, #f48fb1 100%);
+    color: #4a1a2c;
+}
+
+.btn-secondary:hover {
+    background: linear-gradient(135deg, #f48fb1 0%, #f06292 100%);
+}
+
+/* ==========================================
+   10. FORM ELEMENTS (FOR QUESTIONS PAGE)
+   ========================================== */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #2d5016;
+    font-size: 1.1rem;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid #c8e6c9;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: all 0.3s ease;
+    background-color: #fafafa;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: #f8c8dc;
+    background-color: white;
+    box-shadow: 0 4px 12px rgba(248, 200, 220, 0.3);
+}
+
+.form-group textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+/* Radio and Checkbox Styling */
+.radio-group,
+.checkbox-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.radio-group label,
+.checkbox-group label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-weight: 400;
+}
+
+.radio-group input[type="radio"],
+.checkbox-group input[type="checkbox"] {
+    margin-right: 0.8rem;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+/* ==========================================
+   11. FOOTER
+   ========================================== */
+footer {
+    background: linear-gradient(135deg, #2d5016 0%, #1a3009 100%);
+    color: white;
+    padding: 3rem 2rem 1.5rem;
+    margin-top: 4rem;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.footer-section h3 {
+    color: #c8e6c9;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.footer-section p,
+.footer-section a {
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: none;
+    display: block;
+    margin-bottom: 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+    color: #f8c8dc;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* ==========================================
+   12. RESPONSIVE DESIGN (MOBILE FIRST)
+   ========================================== */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .hero p {
+        font-size: 1.1rem;
+    }
+    
+    nav ul {
+        gap: 1rem;
+        justify-content: center;
+    }
+    
+    .header-container {
+        justify-content: center;
+        gap: 1rem;
+    }
+    
+    .two-column {
+        grid-template-columns: 1fr;
+    }
+    
+    .content-card {
+        padding: 1.5rem;
+    }
+    
+    .image-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+        align-items: center;
+    }
+    
+    .btn {
+        display: block;
+        text-align: center;
+    }
+}
+
+/* ==========================================
+   13. ACCESSIBILITY ENHANCEMENTS
+   ========================================== */
+a:focus,
+button:focus,
+input:focus,
+textarea:focus,
+select:focus {
+    outline: 3px solid #f8c8dc;
+    outline-offset: 2px;
+}
+
+/* High contrast for better readability */
+::selection {
+    background-color: #f8c8dc;
+    color: #1a3009;
+}
+
+/* ==========================================
+   14. UTILITY CLASSES
+   ========================================== */
+.text-center {
+    text-align: center;
+}
+
+.mt-2 {
+    margin-top: 2rem;
+}
+
+.mb-2 {
+    margin-bottom: 2rem;
+}
+
+.highlight-box {
+    background: linear-gradient(135deg, #fff9c4 0%, #fff59d 100%);
+    border-left: 5px solid #f8c8dc;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin: 1.5rem 0;
+}
+    </style>
+</head>
+<body>
+    <!-- PRELOADER (CSS ONLY - NO JAVASCRIPT) -->
+    <div class="preloader">
+        <div class="preloader-content">
+            <div class="spinner"></div>
+            <p class="preloader-text">Loading Climate Change Info...</p>
+        </div>
+    </div>
+
+    <!-- HEADER & NAVIGATION -->
+    <header>
+        <div class="header-container">
+            <a href="#page1" class="logo">🌍 Climate Action</a>
+            <nav>
+                <ul>
+                    <li><a href="#page1" class="active">Introduction</a></li>
+                    <li><a href="#page2">What is It?</a></li>
+                    <li><a href="#page3">Problems</a></li>
+                    <li><a href="#page4">Solutions</a></li>
+                    <li><a href="#page5">Questions</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- PAGE 1: INTRODUCTION -->
+    <section id="page1">
+        <!-- HERO SECTION -->
+        <div class="hero">
+            <div class="hero-container">
+                <h1>Understanding Climate Change</h1>
+                <p>Our planet is changing. Let's learn about climate change, its impacts, and what we can do to create a sustainable future for all.</p>
+            </div>
+        </div>
+
+        <!-- MAIN CONTENT -->
+        <div class="container">
+            <div class="content-card">
+                <h2>Welcome to Climate Change Education</h2>
+                <p>Climate change is one of the most pressing challenges facing our planet today. It affects every living organism, every ecosystem, and every human community across the globe. Understanding climate change is the first step toward taking meaningful action to protect our environment and secure a sustainable future for generations to come.</p>
+                
+                <!-- IMAGE PLACEHOLDER: Earth from space -->
+                <div class="image-box">
+                    <img src="./images/global warming.avif" alt="Earth from space showing a thin blue atmosphere">
+                </div>
+
+                <h3>Why This Topic Matters</h3>
+                <p>The Earth's climate has always undergone natural variations over millions of years. However, what we're experiencing now is different. Scientific evidence overwhelmingly shows that human activities, particularly since the Industrial Revolution, have accelerated changes in our climate at an unprecedented rate.</p>
+                
+                <p>The consequences of these changes are already visible: rising global temperatures, melting ice caps, extreme weather events, rising sea levels, and disrupted ecosystems. These changes don't just affect distant polar bears or coral reefs—they impact our daily lives, our food security, our health, and our economy.</p>
+
+                <div class="highlight-box">
+                    <strong>Did You Know?</strong> The last decade (2010-2020) was the warmest on record, with global average temperatures rising approximately 1.2°C above pre-industrial levels.
+                </div>
+
+                <h3>What You'll Learn on This Website</h3>
+                <p>This educational platform is designed to provide you with comprehensive, accessible information about climate change. Whether you're a student, educator, concerned citizen, or policy maker, you'll find valuable insights here. Our content is organized into five key sections:</p>
+
+                <ul>
+                    <li><strong>Introduction (This Page):</strong> An overview of why climate change education matters and what you can expect to learn</li>
+                    <li><strong>What is Climate Change:</strong> Scientific explanations of climate change, greenhouse gases, and how human activity drives global warming</li>
+                    <li><strong>Problems Caused by Climate Change:</strong> Detailed examination of the impacts on our environment, societies, and future</li>
+                    <li><strong>Solutions & Prevention:</strong> Practical actions, innovative technologies, and policy approaches to combat climate change</li>
+                    <li><strong>Questions & Interaction:</strong> Test your knowledge and engage with the material through interactive elements</li>
+                </ul>
+
+                <!-- IMAGE GRID -->
+                <div class="image-grid">
+                    <div class="image-box">
+                        <img src="./images/solar panels.jfif" alt="Solar panels in a field representing renewable energy">
+                    </div>
+                    <div class="image-box">
+                        <img src="./images/greeen forest.webp" alt="Lush green forest ecosystem">
+                    </div>
+                    <div class="image-box">
+                        <img src="./images/hands holding a plant.jpg" alt="Hands holding a young plant representing tree planting">
+                    </div>
+                </div>
+
+                <h3>The Urgency of Action</h3>
+                <p>While the situation is serious, it's important to remember that we still have time to make a difference. Every action counts, from individual lifestyle changes to large-scale policy reforms. The transition to renewable energy, sustainable agriculture, and circular economies is already underway in many parts of the world.</p>
+
+                <p>Young people around the globe are leading climate movements, demanding action from governments and corporations. Scientists continue to innovate, developing new technologies for carbon capture, clean energy, and sustainable living. Communities are coming together to build resilience and adapt to changing conditions.</p>
+
+                <div class="two-column">
+                    <div class="column">
+                        <h4>Individual Impact</h4>
+                        <p>Every person can contribute to climate action through conscious choices in consumption, transportation, energy use, and advocacy.</p>
+                    </div>
+                    <div class="column">
+                        <h4>Collective power</h4>
+                        <p>When communities, businesses, and governments work together, we can create systemic change that addresses climate change at its roots.</p>
+                    </div>
+                </div>
+
+                <p class="text-center mt-2">
+                    <a href="#page2" class="btn">Continue to Learn About Climate Change →</a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PAGE 2: WHAT IS CLIMATE CHANGE -->
+    <section id="page2">
+        <div class="hero">
+            <div class="hero-container">
+                <h1>What is Climate Change?</h1>
+                <p>Understanding the science behind our changing climate</p>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="content-card">
+                <h2>Defining Climate Change</h2>
+                <p>Climate change refers to long-term shifts in global or regional climate patterns, particularly the rise in average global temperatures primarily caused by increased levels of atmospheric carbon dioxide produced by the use of fossil fuels. While the Earth's climate has changed throughout history, the current warming trend is of particular significance because most of it is extremely likely to be the result of human activity since the mid-20th century.</p>
+
+                <!-- IMAGE PLACEHOLDER: Graph -->
+                <div class="image-box">
+                    <img src="./images/graph.webp" alt="Graph showing temperature rise over decades">
+                </div>
+
+                <h3>The Greenhouse Effect</h3>
+                <p>To understand climate change, we must first understand the greenhouse effect. This is a natural process that warms the Earth's surface. When the Sun's energy reaches the Earth's atmosphere, some of it is reflected back to space and the rest is absorbed and re-radiated by greenhouse gases.</p>
+
+                <p>Greenhouse gases include water vapor, carbon dioxide (CO2), methane (CH4), nitrous oxide (N2O), and others. These gases trap heat in the atmosphere, keeping our planet warm enough to sustain life. Without the greenhouse effect, Earth's average temperature would be about -18°C instead of the current 15°C.</p>
+
+                <div class="highlight-box">
+                    <strong>The Problem:</strong> Human activities have intensified the natural greenhouse effect by increasing the concentration of these gases in the atmosphere, particularly CO2, which has increased by more than 40% since pre-industrial times.
+                </div>
+
+                <h3>Main Causes of Climate Change</h3>
+                <p>While natural factors like volcanic eruptions and solar variations do affect climate, scientific consensus is clear that human activities are the dominant cause of current climate change. Here are the primary contributors:</p>
+
+                <ol>
+                    <li><strong>Burning Fossil Fuels:</strong> Coal, oil, and natural gas combustion for electricity, heat, and transportation releases massive amounts of CO2 into the atmosphere.</li>
+                    <li><strong>Deforestation:</strong> Trees absorb CO2, so when forests are cut down for agriculture or development, this carbon sink is lost and stored carbon is released.</li>
+                    <li><strong>Industrial Processes:</strong> Manufacturing, cement production, and chemical processes emit various greenhouse gases.</li>
+                    <li><strong>Agriculture:</strong> Livestock farming produces methane, and rice cultivation and fertilizer use release both methane and nitrous oxide.</li>
+                    <li><strong>Waste Management:</strong> Landfills produce methane as organic waste decomposes, and waste incineration releases CO2.</li>
+                </ol>
+
+                <div class="image-grid">
+                    <div class="image-box">
+                        <img src="./images/smoke.webp" alt="Industrial smokestacks emitting emissions">
+                    </div>
+                    <div class="image-box">
+                        <img src="./images/deforestation.jfif" alt="Clearcutting in a forest showing deforestation">
+                    </div>
+                </div>
+
+                <h3>Scientific Evidence</h3>
+                <p>The evidence for rapid climate change is compelling and comes from multiple independent sources:</p>
+
+                <ul>
+                    <li>Global temperature records show warming of approximately 1.2°C since pre-industrial times</li>
+                    <li>Ocean heat content has increased significantly, with oceans absorbing more than 90% of the excess heat</li>
+                    <li>Arctic sea ice is declining at a rate of 13% per decade</li>
+                    <li>Glaciers are retreating worldwide</li>
+                    <li>Sea levels have risen about 20cm in the past century and the rate is accelerating</li>
+                    <li>Ocean acidification has increased by 30% due to absorption of CO2</li>
+                </ul>
+
+                <div class="two-column">
+                    <div class="column">
+                        <h4>Natural vs. Human-Caused</h4>
+                        <p>While Earth's climate has changed naturally over millions of years, the current rate of change is 10 times faster than previous natural variations, directly correlating with industrial activity.</p>
+                    </div>
+                    <div class="column">
+                        <h4>Scientific Consensus</h4>
+                        <p>97% of actively publishing climate scientists agree that humans are causing global warming and climate change, based on decades of peer-reviewed research.</p>
+                    </div>
+                </div>
+
+                <p class="text-center mt-2">
+                    <a href="#page3" class="btn">Explore the Problems →</a>
+                    <a href="#page1" class="btn btn-secondary">← Back to Introduction</a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PAGE 3: PROBLEMS CAUSED BY CLIMATE CHANGE -->
+    <section id="page3">
+        <div class="hero">
+            <div class="hero-container">
+                <h1>Problems Caused by Climate Change</h1>
+                <p>Understanding the impacts on our planet and society</p>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="content-card">
+                <h2>Environmental Impacts</h2>
+                <p>Climate change is already causing widespread impacts across every region of our planet. These effects are interconnected and often amplify each other, creating complex challenges for ecosystems and human societies.</p>
+
+                <!-- IMAGE: Extreme Weather -->
+                <div class="image-box">
+                    <img src="./images/storm clouds.avif " alt="Dramatic storm clouds representing extreme weather events">
+                </div>
+
+                <h3>Rising Global Temperatures</h3>
+                <p>The most direct effect of climate change is the increase in global average temperatures. This warming is not uniform—some regions experience more dramatic changes than others. The Arctic, for instance, is warming at twice the global average rate. These temperature increases have cascading effects throughout the climate system.</p>
+
+                <h3>Extreme Weather Events</h3>
+                <p>Climate change is increasing the frequency and intensity of extreme weather events:</p>
+
+                <ul>
+                    <li><strong>Heatwaves:</strong> More frequent, longer-lasting, and more intense heatwaves threaten human health, agriculture, and ecosystems</li>
+                    <li><strong>Hurricanes and Cyclones:</strong> Warmer ocean temperatures fuel more powerful tropical storms with higher wind speeds and more rainfall</li>
+                    <li><strong>Droughts:</strong> Changing precipitation patterns are creating longer and more severe droughts in many regions</li>
+                    <li><strong>Floods:</strong> Intense rainfall events are becoming more common, overwhelming drainage systems and causing devastating floods</li>
+                    <li><strong>Wildfires:</strong> Hotter, drier conditions are extending fire seasons and increasing wildfire intensity</li>
+                </ul>
+
+                <div class="image-grid">
+                    <div class="image-box">
+                        <img src="./images/melting glaciers.jpg" alt="Melting glacier ice">
+                    </div>
+                    <div class="image-box">
+                        <img src="./images/dry earth.webp" alt="Cracked dry earth representing drought">
+                    </div>
+                    <div class="image-box">
+                        <img src="./images/coral reefs.jpg" alt="Underwater coral reef">
+                    </div>
+                </div>
+
+                <h3>Impact on Biodiversity and Ecosystems</h3>
+                <p>Climate change threatens biodiversity on an unprecedented scale. Species are forced to adapt, migrate, or face extinction as their habitats change faster than they can evolve. Coral reefs are experiencing mass bleaching events. Polar bears are losing their sea ice hunting grounds. Countless plant and animal species are shifting their ranges poleward or to higher altitudes.</p>
+
+                <div class="highlight-box">
+                    <strong>Critical Fact:</strong> Scientists estimate that one million plant and animal species are threatened with extinction, many within decades, partly due to climate change impacts.
+                </div>
+
+                <h3>Human Health Impacts</h3>
+                <p>Climate change poses serious risks to human health through multiple pathways:</p>
+
+                <ol>
+                    <li><strong>Heat-Related Illness:</strong> Increased temperatures lead to more heat stroke, dehydration, and cardiovascular stress, particularly affecting elderly and vulnerable populations</li>
+                    <li><strong>Air Quality:</strong> Higher temperatures worsen air pollution and increase allergen production, exacerbating respiratory diseases like asthma</li>
+                    <li><strong>Disease Spread:</strong> Changing temperatures and precipitation patterns expand the range of disease-carrying insects like mosquitoes, spreading malaria, dengue, and other diseases to new areas</li>
+                    <li><strong>Food and Water Security:</strong> Droughts, floods, and changing growing seasons threaten crop yields and water supplies, leading to malnutrition and waterborne diseases</li>
+                    <li><strong>Mental Health:</strong> Climate anxiety, displacement from extreme events, and loss of livelihoods contribute to stress, depression, and trauma</li>
+                </ol>
+
+                <h3>Economic Consequences</h3>
+                <p>The economic costs of climate change are staggering and growing. Damage from extreme weather events runs into hundreds of billions of dollars annually. Agricultural losses, infrastructure damage, healthcare costs, and decreased labor productivity all impose significant economic burdens.</p>
+
+                <div class="two-column">
+                    <div class="column">
+                        <h4>Direct Costs</h4>
+                        <p>Infrastructure damage, crop failures, property loss, and disaster response expenses create immediate economic impacts that strain public and private resources.</p>
+                    </div>
+                    <div class="column">
+                        <h4>Long-Term Impacts</h4>
+                        <p>Reduced productivity, displaced populations, loss of tourism revenue, and ecosystem service degradation create ongoing economic challenges.</p>
+                    </div>
+                </div>
+
+                <h3>Social and Political Challenges</h3>
+                <p>Climate change exacerbates existing inequalities and creates new social tensions. Low-income communities and developing nations, which have contributed least to climate change, often suffer its worst impacts. Climate refugees are displaced by sea-level rise, droughts, and extreme weather. Resource scarcity can fuel conflicts over water, food, and land.</p>
+
+                <!-- IMAGE: Community Impact -->
+                <div class="image-box">
+                    <img src="./images/city scape.jfif" alt="Cityscape showing human habitation impacted by climate">
+                </div>
+
+                <p class="text-center mt-2">
+                    <a href="#page4" class="btn">Discover Solutions →</a>
+                    <a href="#page2" class="btn btn-secondary">← Back to What is Climate Change</a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PAGE 4: SOLUTIONS & PREVENTION -->
+    <section id="page4">
+        <div class="hero">
+            <div class="hero-container">
+                <h1>Solutions & Prevention</h1>
+                <p>Taking action to create a sustainable future</p>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="content-card">
+                <h2>How We Can Combat Climate Change</h2>
+                <p>While the challenges posed by climate change are significant, we have the knowledge, technology, and capacity to address them. Solutions exist at every level—from individual actions to global policy changes. The key is implementing these solutions quickly and at scale.</p>
+
+                <!-- IMAGE: Solar and Wind -->
+                <div class="image-box">
+                    <img src="./images/solar , wind turbines.jfif" alt="Solar panels and wind turbines generating clean energy">
+                </div>
+
+                <h3>Renewable Energy Transition</h3>
+                <p>Transitioning from fossil fuels to renewable energy sources is the most critical step in reducing greenhouse gas emissions. The good news is that renewable energy is now cost-competitive with fossil fuels in many regions, making this transition both environmentally necessary and economically viable.</p>
+
+                <ul>
+                    <li><strong>Solar Power:</strong> Photovoltaic technology continues to improve and costs have dropped by more than 90% in the past decade</li>
+                    <li><strong>Wind Energy:</strong> Both onshore and offshore wind farms are expanding rapidly worldwide</li>
+                    <li><strong>Hydroelectric Power:</strong> Provides reliable renewable electricity, though must be implemented carefully to minimize environmental impact</li>
+                    <li><strong>Geothermal Energy:</strong> Harnesses Earth's internal heat for electricity and heating</li>
+                    <li><strong>Energy Storage:</strong> Battery technology improvements enable better integration of intermittent renewable sources</li>
+                </ul>
+
+                <div class="image-grid">
+                    <div class="image-box">
+                        <img src="./images/electric vehicle.webp" alt="Electric vehicle plugged in at charging station">
+                    </div>
+                    <div class="image-box">
+                        <img src="./images/modern buildings.jpg" alt="Modern building with vertical gardens">
+                    </div>
+                </div>
+
+                <h3>Sustainable Transportation</h3>
+                <p>Transportation accounts for a significant portion of global emissions. Solutions include:</p>
+
+                <ol>
+                    <li>Electric vehicles (EVs) powered by renewable energy</li>
+                    <li>Improved public transportation systems</li>
+                    <li>Cycling and walking infrastructure</li>
+                    <li>High-speed rail as alternative to short-haul flights</li>
+                    <li>Sustainable aviation fuels and electric aircraft development</li>
+                </ol>
+
+                <h3>Forest Conservation and Restoration</h3>
+                <p>Forests are crucial carbon sinks that absorb CO2 from the atmosphere. Protecting existing forests and planting new ones is essential. Reforestation and afforestation programs can help offset emissions while providing habitat for wildlife and supporting local communities.</p>
+
+                <div class="highlight-box">
+                    <strong>Inspiring Initiative:</strong> The Trillion Tree Campaign aims to plant one trillion trees globally by 2030, which could sequester approximately 200 gigatons of carbon.
+                </div>
+
+                <h3>Sustainable Agriculture and Food Systems</h3>
+                <p>Transforming how we produce and consume food can significantly reduce emissions:</p>
+
+                <ul>
+                    <li>Regenerative agriculture practices that rebuild soil health</li>
+                    <li>Reduced meat consumption and shift toward plant-based diets</li>
+                    <li>Minimizing food waste throughout the supply chain</li>
+                    <li>Local and seasonal food consumption</li>
+                    <li>Precision agriculture using technology to optimize resource use</li>
+                </ul>
+
+                <h3>Individual Actions That Make a Difference</h3>
+                <p>Every person can contribute to climate solutions through daily choices:</p>
+
+                <div class="two-column">
+                    <div class="column">
+                        <h4>At Home</h4>
+                        <ul>
+                            <li>Improve home insulation</li>
+                            <li>Use energy-efficient appliances</li>
+                            <li>Install solar panels if possible</li>
+                            <li>Reduce, reuse, recycle</li>
+                            <li>Conserve water</li>
+                        </ul>
+                    </div>
+                    <div class="column">
+                        <h4>Lifestyle Choices</h4>
+                        <ul>
+                            <li>Eat less meat and dairy</li>
+                            <li>Buy local and seasonal</li>
+                            <li>Use public transport or bike</li>
+                            <li>Reduce air travel</li>
+                            <li>Support green businesses</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h3>Policy and Systemic Change</h3>
+                <p>Individual actions are important, but systemic change requires policy interventions. Governments must implement carbon pricing, renewable energy mandates, emissions regulations, and green infrastructure investments. International cooperation through agreements like the Paris Climate Accord is essential for coordinated global action.</p>
+
+                <!-- IMAGE: Activism -->
+                <div class="image-box">
+                    <img src="./images/marching.jfif" alt="Crowd of people marching for climate action">
+                </div>
+
+                <h3>Innovation and Technology</h3>
+                <p>Emerging technologies offer promising solutions: carbon capture and storage, green hydrogen, advanced nuclear power, sustainable materials, and artificial intelligence for optimizing energy systems. Continued investment in research and development is crucial for breakthrough innovations.</p>
+
+                <p class="text-center mt-2">
+                    <a href="#page5" class="btn">Test Your Knowledge →</a>
+                    <a href="#page3" class="btn btn-secondary">← Back to Problems</a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PAGE 5: QUESTIONS / USER INTERACTION -->
+    <section id="page5">
+        <div class="hero">
+            <div class="hero-container">
+                <h1>Questions & Feedback</h1>
+                <p>Test your knowledge and share your thoughts</p>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="content-card">
+                <h2>Climate Change Knowledge Quiz</h2>
+                <p>Answer these questions to test your understanding of climate change. (Note: This is a static form for demonstration purposes)</p>
+
+                <div class="form-group">
+                    <label>1. What is the primary greenhouse gas responsible for global warming?</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="q1" value="a"> Oxygen</label>
+                        <label><input type="radio" name="q1" value="b"> Carbon Dioxide (CO2)</label>
+                        <label><input type="radio" name="q1" value="c"> Nitrogen</label>
+                        <label><input type="radio" name="q1" value="d"> Helium</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>2. Which of the following contributes to climate change? (Select all that apply)</label>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" name="q2" value="a"> Burning fossil fuels</label>
+                        <label><input type="checkbox" name="q2" value="b"> Deforestation</label>
+                        <label><input type="checkbox" name="q2" value="c"> Planting trees</label>
+                        <label><input type="checkbox" name="q2" value="d"> Industrial emissions</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>3. How much has the global temperature risen since pre-industrial times?</label>
+                    <select>
+                        <option value="">-- Select an answer --</option>
+                        <option value="a">0.5°C</option>
+                        <option value="b">1.2°C</option>
+                        <option value="c">5°C</option>
+                        <option value="d">10°C</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>4. In your own words, describe one action you can take to help combat climate change:</label>
+                    <textarea placeholder="Share your thoughts here..."></textarea>
+                </div>
+            </div>
+
+            <div class="content-card">
+                <h2>Share Your Feedback</h2>
+                <p>We'd love to hear your thoughts about this educational website!</p>
+
+                <div class="form-group">
+                    <label>Your Name (Optional):</label>
+                    <input type="text" placeholder="Enter your name">
+                </div>
+
+                <div class="form-group">
+                    <label>Email (Optional):</label>
+                    <input type="email" placeholder="your.email@example.com">
+                </div>
+
+                <div class="form-group">
+                    <label>How would you rate this website?</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="rating" value="5"> ⭐⭐⭐⭐⭐ Excellent</label>
+                        <label><input type="radio" name="rating" value="4"> ⭐⭐⭐⭐ Good</label>
+                        <label><input type="radio" name="rating" value="3"> ⭐⭐⭐ Average</label>
+                        <label><input type="radio" name="rating" value="2"> ⭐⭐ Needs Improvement</label>
+                        <label><input type="radio" name="rating" value="1"> ⭐ Poor</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>What did you learn from this website?</label>
+                    <textarea placeholder="Tell us what new information you discovered..."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label>Suggestions for improvement:</label>
+                    <textarea placeholder="How can we make this website better?"></textarea>
+                </div>
+
+                <!-- IMAGE: Thank you -->
+                <div class="image-box">
+                    <img src="./images/hands holding earth.jfif" alt="Illustration of hands holding the earth">
+                </div>
+
+                <p class="text-center mt-2">
+                    <button class="btn">Submit Feedback</button>
+                    <a href="#page1" class="btn btn-secondary">← Back to Start</a>
+                </p>
+            </div>
+
+            <div class="content-card">
+                <h2>Take Action Today!</h2>
+                <p>Knowledge is the first step, but action creates change. Here are some immediate steps you can take:</p>
+
+                <div class="two-column">
+                    <div class="column">
+                        <h4>🌱 Start Small</h4>
+                        <p>Reduce your energy use, start composting, or switch to reusable products. Small changes add up!</p>
+                    </div>
+                    <div class="column">
+                        <h4>📢 Spread Awareness</h4>
+                        <p>Share what you've learned with friends and family. Education multiplies impact.</p>
+                    </div>
+                </div>
+
+                <div class="highlight-box text-center">
+                    <strong>Remember:</strong> The best time to act on climate change was 20 years ago. The second best time is now. Every action matters!
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>About This Project</h3>
+                <p>This educational website was created to raise awareness about climate change and inspire action for a sustainable future.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <a href="#page1">Introduction</a>
+                <a href="#page2">What is Climate Change</a>
+                <a href="#page3">Problems</a>
+                <a href="#page4">Solutions</a>
+                <a href="#page5">Questions</a>
+            </div>
+            <div class="footer-section">
+                <h3>Resources</h3>
+                <p>Learn more from:</p>
+                <p>- IPCC Reports</p>
+                <p>- NASA Climate</p>
+                <p>- UN Climate Action</p>
+            </div>
+            
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Climate Action Education | Created with care for our planet</p>
+        </div>
+    </footer>
+</body>
+</html>
