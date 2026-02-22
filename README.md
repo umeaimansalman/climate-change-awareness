@@ -1,35 +1,31 @@
-🌍 Climate Action Now
+# 🌍 Climate Action Now
 
 A simple, beginner-friendly website designed to help people understand climate change and take meaningful action.
 
-📌 About the Project
+## 📌 About the Project
 
-Climate Action Now is an educational website that explains the basics of global warming in clear, simple language.
-It also provides practical, everyday steps that anyone can follow to reduce their carbon footprint and contribute to a healthier planet.
+**Climate Action Now** is an educational website that explains the basics of global warming in clear, simple language.  
+It also provides practical, everyday steps that anyone can follow to reduce their carbon footprint.
 
-This project is ideal for beginners who want to learn about climate change and start making a difference.
+## 🎯 Features
 
-🎯 Features
+- 🌡️ Easy explanation of climate change  
+- 🌎 Information about global warming  
+- ✅ Simple daily actions to reduce carbon footprint  
+- 💡 Beginner-friendly design and layout  
 
-🌡️ Easy explanation of climate change
+## 🚀 Live Project
 
-🌎 Information about global warming
+🔗 [View Live Project](https://umeaimansalman.github.io/climate-change-awareness/)
 
-✅ Simple daily actions to reduce carbon footprint
+## 🛠️ Built With
 
-💡 Beginner-friendly design and layout
+- HTML  
+- CSS  
 
-🚀 Live Project
+## 🌱 Purpose
 
-🔗 Project Link:
-https://umeaimansalman.github.io/climate-change-awareness/
-
-🛠️ Built With
-
-HTML
-
-CSS
-
+The goal of this project is to spread awareness and encourage small daily actions that collectively create a big environmental impact.
 🌱 Purpose
 
 The goal of this project is to spread awareness and encourage small daily actions that collectively create a big environmental impact.
